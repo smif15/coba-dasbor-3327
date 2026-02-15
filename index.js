@@ -17,8 +17,8 @@ app.post('/api/run', (req, res) => {
 
     axios.get(`${url}/${API_KEY}`)
         .then(response => {
-            const { turvar, tahun, turtahun, datacontent } = response.data;
-            res.json({ vari : response.data.var, turvar, tahun, turtahun, datacontent })
+            const { turvar, tahun, turtahun, datacontent, vervar } = response.data;
+            res.json({ vari : response.data.var, turvar, tahun, turtahun, datacontent, vervar })
         })
 })
 
